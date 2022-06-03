@@ -40,4 +40,11 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    if (this.authForm.invalid) {
+      return
+    } 
+
+    console.log(this.authForm.value);
+  }
 }

@@ -1,8 +1,9 @@
 <h3>Create an account</h3>
 <form 
     class="ui form"
-    [formGroup]="authForm">
-
+    [formGroup]="authForm"
+    (ngSubmit)="onSubmit()"
+    >
     <app-input 
         label="Username" 
         [control]="$any(authForm.get('username'))" 
