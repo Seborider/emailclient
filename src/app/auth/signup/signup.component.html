@@ -2,28 +2,27 @@
 <form 
     class="ui form"
     [formGroup]="authForm">
-    <!-- <div class="field">
-        <label>Username</label>
-        <input formControlName="username" />
-    </div> -->
+
     <app-input 
         label="Username" 
         [control]="$any(authForm.get('username'))" 
+        inputType="text"
         >
     </app-input>
-    {{ authForm.get('username')?.errors | json }}
-
-    <div class="field">
-        <label>Password</label>
-        <input formControlName="password" />
-    </div>
-    {{ authForm.get('password')?.errors | json }}
-
-    <div class="field">
-        <label>Password Confirmation</label>
-        <input formControlName="passwordConfirmation" />
-    </div>
-    {{ authForm.get('passwordConfirmation')?.errors | json }}
+    
+    <app-input
+        label="Password"
+        [control]="$any(authForm.get('password'))"
+        inputType="password"
+        >
+    </app-input>
+    
+    <app-input
+        label="Password Confirmation"
+        [control]="$any(authForm.get('passwordConfirmation'))"
+        inputType="password"
+        >
+    </app-input>
 
     <button class="ui submit button primary">Submit</button>
 
