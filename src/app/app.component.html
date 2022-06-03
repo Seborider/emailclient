@@ -7,7 +7,7 @@
             Sebomail</a>
         
         <div class="right menu">
-        <ng-container *ngIf="signedin">
+        <ng-container *ngIf="signedin$ | async">
         <a 
             class="item"
             routerLink="/inbox" 
@@ -24,7 +24,7 @@
 
         </ng-container>
 
-        <ng-container *ngIf="!signedin">
+        <ng-container *ngIf="!(signedin$ | async)">
         <a 
             class="item"
             routerLink="/" 
