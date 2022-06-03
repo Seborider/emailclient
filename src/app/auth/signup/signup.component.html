@@ -24,7 +24,20 @@
         >
     </app-input>
 
-    <button class="ui submit button primary">Submit</button>
+    <div
+        *ngIf="authForm.get('password')?.touched &&
+        authForm.get('passwordConfirmation')?.touched &&
+        authForm.errors" 
+        class="ui red basic label"
+        >
+        <p *ngIf="authForm.errors?.['passwordsDontMatch']">
+            Password and Password Confirmation must match.
+        </p>
+    </div>
+
+    <div>
+        <button class="ui submit button primary">Submit</button>
+    </div>
 
     {{ authForm.errors | json }}
 </form>
