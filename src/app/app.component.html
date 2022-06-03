@@ -1,1 +1,40 @@
-<router-outlet></router-outlet>
+<div class="ui container">
+    <div class="ui secondary pointing menu">
+        <a 
+            routerLink="/" 
+            class="item"
+            >
+            Sebomail</a>
+        
+        <div class="right menu">
+        <a 
+            class="item"
+            routerLink="/inbox" 
+            routerLinkActive="active"
+            >
+            Inbox</a>   
+        
+        <a 
+            class="item"
+            routerLink="/signout" 
+            routerLinkActive="active"
+            >
+            Sign Out</a>
+        <a 
+            class="item"
+            routerLink="/" 
+            routerLinkActive="active"
+            >
+            Sign In</a>
+        
+        <a 
+            class="item"
+            routerLink="/signup" 
+            routerLinkActive="active"
+            >
+            Sign Up</a> 
+
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
