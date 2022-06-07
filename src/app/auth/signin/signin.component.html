@@ -18,6 +18,17 @@
     >
 </app-input>
 
-<button class="ui submit button primary">Submit</button>
+<div
+    class="ui red basic label"
+    *ngIf="authForm.errors"
+    >
+    <p *ngIf="authForm.errors?.['credentials']" >
+        Invalid username or password
+    </p>
+</div>
+
+<div>
+    <button class="ui submit button primary">Submit</button>
+</div>
 
 </form>
