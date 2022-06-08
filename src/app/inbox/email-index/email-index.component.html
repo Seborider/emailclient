@@ -3,13 +3,15 @@
         class="item"
         *ngFor="let email of emails"
         >
-        <div class="content">
-            <div class="header">
-                {{ email.subject }}
+        <a [routerLink]="email.id">
+            <div class="content">
+                <div class="header">
+                    {{ email.subject }}
+                </div>
+                <p>
+                    {{ email.from }}
+                </p>
             </div>
-            <p>
-                {{ email.from }}
-            </p>
-        </div>
+        </a>
     </div>
 </div>
