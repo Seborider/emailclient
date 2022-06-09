@@ -7,11 +7,12 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-@Input() label: string | undefined;
-@Input() control = new FormControl('')
-@Input() inputType: string | undefined
+@Input() label! : string
+@Input() control : any = new FormControl('')
+@Input() inputType! : string
+@Input() controlType! : 'input' | 'textarea'
 
-  constructor() { }
+constructor() { }
 
   ngOnInit(): void {
   }
