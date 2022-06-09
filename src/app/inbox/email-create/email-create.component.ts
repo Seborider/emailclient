@@ -17,7 +17,7 @@ export class EmailCreateComponent implements OnInit {
       subject: '',
       html: '',
       text: '',
-      from: ''
+      from: 'test'
     }
    }
 
