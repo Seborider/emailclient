@@ -7,8 +7,10 @@
         />
     <textarea 
         *ngIf="controlType === 'textarea' "
-        name="" id="" cols="30" rows="10">
         [formControl]="control" 
+        cols="30" 
+        rows="10"
+        >
     </textarea>
     <div 
         *ngIf="showErrors()"

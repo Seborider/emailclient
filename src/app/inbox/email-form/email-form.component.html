@@ -3,6 +3,7 @@
         label="To"
         inputType="email"
         [control]="emailForm.get('to')"
+        controlType="input"
         >
     </app-input>
     
@@ -10,6 +11,7 @@
         label="From"
         inputType="email"
         [control]="emailForm.get('from')"
+        controlType="input"
         >
     </app-input>
 
@@ -17,11 +19,13 @@
         label="Subject"
         inputType="text"
         [control]="emailForm.get('subject')"
+        controlType="input"
         >
     </app-input>
 
     <app-input
         label="Content"
+        inputType="text"
         [control]="emailForm.get('text')"
         controlType="textarea"
         >
