@@ -14,5 +14,7 @@
     </div>
     <app-email-form
         [email]="email"
-        ></app-email-form>
+        (emailSubmit)="onSubmit($event)"
+        >
+        </app-email-form>
 </app-modal>
