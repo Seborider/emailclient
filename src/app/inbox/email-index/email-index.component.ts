@@ -12,7 +12,7 @@ export class EmailIndexComponent implements OnInit {
   constructor(private emailService: EmailService) {}
 
   ngOnInit() {
-    this.emailService.getEmails().subscribe((emails)=>{
+    this.emailService.getEmails().subscribe((emails) => {
       this.emails = emails
 
     })
